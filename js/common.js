@@ -183,16 +183,18 @@ $('.pagepiling').pagepiling({
     $("#slide ul li").eq($(this).index()).append("1"); //делаете что хотите со слайдом с таким же индексом как у ссылки
     });
 
-// табы
-    var tabContainer = document.querySelector('.nav-tabs');
+// Табы
+    var tabContainer = document.querySelector('.nav-tabs'); // Конейнер с табами, на котором будем ловить клик
+    // Элементы, которые надо будет сделать .active
     var tabButton = document.querySelectorAll('.nav-item');
-    var tabLink = document.querySelectorAll('.nav-link');
     var tabContentItem = document.querySelectorAll('.tab-content__item');
-    var slickSliderInTab = document.querySelector('.tab-content .slick-slider');
-    var tabContentItemHeight = slickSliderInTab.offsetHeight;
-    var tabContent = document.querySelector('.tab-content');
-    tabContent.style.height = tabContentItemHeight + 'px';
-    var tabLength = tabButton.length;
+    var tabLink = document.querySelectorAll('.nav-link');
+    // /Элементы, которые надо будет сделать .active
+    var tabContent = document.querySelector('.tab-content'); // Определяем родительский конейтнер
+    var slickSliderInTab = document.querySelector('.tab-content .slick-slider'); // Определяем слайдер
+    var tabContentItemHeight = slickSliderInTab.offsetHeight; // Берем высоту слайдера
+    tabContent.style.height = tabContentItemHeight + 'px'; // Добавляем высоту слайдера родительсткому контенеру
+    var tabLength = tabButton.length; // Количество табов
 
     tabContainer.onclick = (e) => {
       var target = e.target;
@@ -201,14 +203,13 @@ $('.pagepiling').pagepiling({
         tabContentItem[i].classList.remove('active');
         tabLink[i].classList.remove('active');
         if (tabLink[i] == target) {
-          console.log('target');
           tabButton[i].classList.add('active');
           tabContentItem[i].classList.add('active');
           tabLink[i].classList.add('active');
         }
       }
     }
-// /табы
+// /Табы
 
 
 
