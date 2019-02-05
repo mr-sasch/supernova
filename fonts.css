@@ -1,0 +1,10 @@
+@font-face{
+font-family: 'HelveticaNeueCyr-Heavy';
+src: url('fonts/HelveticaNeueCyr-Heavy.eot');
+src: url('fonts/HelveticaNeueCyr-Heavy.eot?iefix') format('eot'),
+url('fonts/HelveticaNeueCyr-Heavy.woff') format('woff'),
+url('fonts/HelveticaNeueCyr-Heavy.ttf') format('truetype'),
+font-weight: normal;
+font-style: normal;
+}
+
